@@ -15,13 +15,14 @@ responsible for managing TMs in their own organizations, or on behalf of others.
 
 ## Document source
 
-The document source is currently on [Google Docs](https://docs.google.com/document/d/1xfDrQQ7usEyu7V4UUp76anBJnmOF58HFWiib2HqOu1s/edit).
+The document source is available on:
 
-We're working on converting it to Markdown and hosting all the sources in this repository.
+* [Google Docs](https://docs.google.com/document/d/1xfDrQQ7usEyu7V4UUp76anBJnmOF58HFWiib2HqOu1s/edit) - initial version
+* [GitHub](best-practices.md) - Markdown version
 
 ## Releases
 
-The document is published to [GitHub](https://github.com/GILT-Forum/TM-Mgmt-Best-Practices/releases)
+The document is published as PDF to [GitHub](https://github.com/GILT-Forum/TM-Mgmt-Best-Practices/releases)
 
 ## Contributors
 
