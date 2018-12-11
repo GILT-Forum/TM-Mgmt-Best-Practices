@@ -1,6 +1,6 @@
 # TM-Mgmt-Best-Practices
 
-This project documents the Best Practices in Translation Memory Management.
+This project documents the [Best Practices in Translation Memory Management](best-practices.md).
 
 ## Introduction
 
@@ -15,13 +15,14 @@ responsible for managing TMs in their own organizations, or on behalf of others.
 
 ## Document source
 
-The document source is currently on [Google Docs](https://docs.google.com/document/d/1xfDrQQ7usEyu7V4UUp76anBJnmOF58HFWiib2HqOu1s/edit).
+The document source is available on:
 
-We're working on converting it to Markdown and hosting all the sources in this repository.
+* [GitHub](best-practices.md) - Markdown version
+* [Google Docs](https://docs.google.com/document/d/1xfDrQQ7usEyu7V4UUp76anBJnmOF58HFWiib2HqOu1s/edit) - initial Google Docs version
 
 ## Releases
 
-The document is published to [GitHub](https://github.com/GILT-Forum/TM-Mgmt-Best-Practices/releases)
+The document is published as PDF to [GitHub](https://github.com/GILT-Forum/TM-Mgmt-Best-Practices/releases)
 
 ## Contributors
 
@@ -39,6 +40,10 @@ The document is published to [GitHub](https://github.com/GILT-Forum/TM-Mgmt-Best
 * **Octavio Ramos** – *Intel*
 
 See also the list of [contributors](https://github.com/GILT-Forum/TM-Mgmt-Best-Practices/contributors) who participated in this project.
+
+## Contributing
+
+You can contribute by suggesting changes in the project [Issues](https://github.com/GILT-Forum/TM-Mgmt-Best-Practices/issues), or by editing the [best-practices.md](best-practices.md) file and creating a pull request.
 
 ## License
 
