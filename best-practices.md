@@ -1204,6 +1204,7 @@ You can set your own schedule for such backups, but a monthly cadence
 may suffice.
 
 ---
+
 *Example of TM Backup in use:*
 
 A user searches for a term in the TM and intends to export the results, but accidentally deletes all search results instead.
