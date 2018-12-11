@@ -26,7 +26,7 @@ Octavio Ramos – **Intel**
 
 ## Contact
 
-**GILT Leaders’ Forum**: [https://github.com/GILT-Forum/TM-Mgmt-Best-Practices](https://github.com/GILT-Forum/TM-Mgmt-Best-Practices)
+**GILT Leaders’ Forum**: [https://github.com/GILT-Forum/TM-Mgmt-Best-Practices](https://github.com/GILT-Forum/TM-Mgmt-Best-Practices/issues)
 
 ## License
 
@@ -111,12 +111,59 @@ already use. In the end, we hope this document increases your knowledge
 in this area and that this becomes a living document that will benefit
 people over time as well.
 
-Contact: GILT Leaders' Forum at
-[*gilt.leaders@gmail.com*](mailto:gilt.leaders@gmail.com)
-
 ## Table of Contents
 
-TBD
+- [Best Practices in Translation Memory Management](#best-practices-in-translation-memory-management)
+  - [Document Revision History](#document-revision-history)
+  - [TM Management Task Force Contributors](#tm-management-task-force-contributors)
+  - [Contact](#contact)
+  - [License](#license)
+  - [Introduction](#introduction)
+  - [Table of Contents](#table-of-contents)
+  - [Definitions/Key](#definitionskey)
+  - [Best Practices](#best-practices)
+    - [Create an Admin Role to Manage TMs](#create-an-admin-role-to-manage-tms)
+      - [Define how TMs are organized](#define-how-tms-are-organized)
+      - [Define metadata for TMs](#define-metadata-for-tms)
+      - [Determine the plan or principles for using TMs (grouping / leveraging / updating)](#determine-the-plan-or-principles-for-using-tms-grouping--leveraging--updating)
+      - [Determine the process and criteria for cleaning TMs](#determine-the-process-and-criteria-for-cleaning-tms)
+    - [General TM Housekeeping tasks](#general-tm-housekeeping-tasks)
+      - [Create complete descriptions for TMs](#create-complete-descriptions-for-tms)
+      - [Use consistent filenames and path normalization to avoid duplicates](#use-consistent-filenames-and-path-normalization-to-avoid-duplicates)
+      - [Detect and fix technical issues in the content](#detect-and-fix-technical-issues-in-the-content)
+      - [Remove empty segments (source or target)](#remove-empty-segments-source-or-target)
+    - [Characters](#characters)
+      - [Normalize escaped characters/entities](#normalize-escaped-charactersentities)
+      - [Normalize certain control characters](#normalize-certain-control-characters)
+      - [Normalize whitespaces](#normalize-whitespaces)
+      - [Normalize quotes](#normalize-quotes)
+    - [Tags](#tags)
+      - [Retain tagged or parameterized variables](#retain-tagged-or-parameterized-variables)
+      - [Normalize untagged variable content](#normalize-untagged-variable-content)
+      - [Removing tags that don’t affect the meaning](#removing-tags-that-dont-affect-the-meaning)
+    - [Duplicates](#duplicates)
+      - [Identify and remove duplicates with no context for MT training purposes](#identify-and-remove-duplicates-with-no-context-for-mt-training-purposes)
+      - [Identify and remove In-Context Exact (ICE) duplicates for TMS](#identify-and-remove-in-context-exact-ice-duplicates-for-tms)
+    - [Age/Obsolete](#ageobsolete)
+      - [Remove segments for being older than a certain age](#remove-segments-for-being-older-than-a-certain-age)
+    - [Remove low value entries](#remove-low-value-entries)
+      - [Check if a segment contains mostly non-text content](#check-if-a-segment-contains-mostly-non-text-content)
+      - [Characters that do not match either the expected source or target language](#characters-that-do-not-match-either-the-expected-source-or-target-language)
+      - [Do not remove segments where source = target](#do-not-remove-segments-where-source--target)
+      - [Check unbalanced brackets](#check-unbalanced-brackets)
+      - [Remove entries consisting of only punctuation, whitespace, or tags](#remove-entries-consisting-of-only-punctuation-whitespace-or-tags)
+      - [Remove segments that are too long](#remove-segments-that-are-too-long)
+      - [Remove segments that are too short](#remove-segments-that-are-too-short)
+    - [Inconsistency](#inconsistency)
+      - [Identify segment inconsistencies and fix if appropriate](#identify-segment-inconsistencies-and-fix-if-appropriate)
+    - [Terminology](#terminology)
+      - [Identify terminology inconsistencies](#identify-terminology-inconsistencies)
+    - [Misalignments](#misalignments)
+      - [Check sentence length ratios](#check-sentence-length-ratios)
+    - [TM Maintenance](#tm-maintenance)
+      - [TM Maintenance Tools](#tm-maintenance-tools)
+      - [TM Backups](#tm-backups)
+  - [Summary Table of Recommended Tasks for TMs](#summary-table-of-recommended-tasks-for-tms)
 
 ## Definitions/Key
 
