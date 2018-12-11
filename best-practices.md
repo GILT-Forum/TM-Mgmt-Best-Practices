@@ -1,5 +1,6 @@
+# Best Practices in Translation Memory Management
 
-# Document Revision History
+## Document Revision History
 
 | Version |  Revision Date     | Description|
 |---------|--------------------|----------------------------------------------------------------------------------|
@@ -39,7 +40,7 @@ Best Practices in Translation Memory Management is licensed under a
 International
 License*](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-# Introduction
+## Introduction
 
 The GILT Leaders Forum is a self-organized group of seasoned
 globalization professionals representing various companies from the
@@ -110,74 +111,25 @@ already use. In the end, we hope this document increases your knowledge
 in this area and that this becomes a living document that will benefit
 people over time as well.
 
-Contact: GILT Leaders Forum at
+Contact: GILT Leaders' Forum at
 [*gilt.leaders@gmail.com*](mailto:gilt.leaders@gmail.com)
 
-# Table of Contents
+## Table of Contents
 
-- [Document Revision History](#document-revision-history)
-  - [TM Management Task Force Contributors](#tm-management-task-force-contributors)
-  - [Contact](#contact)
-  - [License](#license)
-- [Introduction](#introduction)
-- [Table of Contents](#table-of-contents)
-- [Definitions/Key](#definitionskey)
-- [Best Practices](#best-practices)
-  - [Create an Admin Role to Manage TMs](#create-an-admin-role-to-manage-tms)
-    - [Define how TMs are organized](#define-how-tms-are-organized)
-    - [Define metadata for TMs](#define-metadata-for-tms)
-    - [Determine the plan or principles for using TMs (grouping / leveraging / updating)](#determine-the-plan-or-principles-for-using-tms-grouping--leveraging--updating)
-    - [Determine the process and criteria for cleaning TMs](#determine-the-process-and-criteria-for-cleaning-tms)
-  - [General TM Housekeeping tasks](#general-tm-housekeeping-tasks)
-    - [Create complete descriptions for TMs](#create-complete-descriptions-for-tms)
-    - [Use consistent filenames and path normalization to avoid duplicates](#use-consistent-filenames-and-path-normalization-to-avoid-duplicates)
-    - [Detect and fix technical issues in the content](#detect-and-fix-technical-issues-in-the-content)
-    - [Remove empty segments (source or target)](#remove-empty-segments-source-or-target)
-  - [Characters](#characters)
-    - [Normalize escaped characters/entities](#normalize-escaped-charactersentities)
-    - [Normalize certain control characters](#normalize-certain-control-characters)
-    - [Normalize whitespaces](#normalize-whitespaces)
-    - [Normalize quotes](#normalize-quotes)
-  - [Tags](#tags)
-    - [Retain tagged or parameterized variables](#retain-tagged-or-parameterized-variables)
-    - [Normalize untagged variable content](#normalize-untagged-variable-content)
-    - [Removing tags that don’t affect the meaning](#removing-tags-that-dont-affect-the-meaning)
-  - [Duplicates](#duplicates)
-    - [Identify and remove duplicates with no context for MT training purposes](#identify-and-remove-duplicates-with-no-context-for-mt-training-purposes)
-    - [Identify and remove In-Context Exact (ICE) duplicates for TMS](#identify-and-remove-in-context-exact-ice-duplicates-for-tms)
-  - [Age/Obsolete](#ageobsolete)
-    - [Remove segments for being older than a certain age](#remove-segments-for-being-older-than-a-certain-age)
-  - [Remove low value entries](#remove-low-value-entries)
-    - [Check if a segment contains mostly non-text content](#check-if-a-segment-contains-mostly-non-text-content)
-    - [Characters that do not match either the expected source or target language](#characters-that-do-not-match-either-the-expected-source-or-target-language)
-    - [Do not remove segments where source = target](#do-not-remove-segments-where-source--target)
-    - [Check unbalanced brackets](#check-unbalanced-brackets)
-    - [Remove entries consisting of only punctuation, whitespace, or tags](#remove-entries-consisting-of-only-punctuation-whitespace-or-tags)
-    - [Remove segments that are too long](#remove-segments-that-are-too-long)
-    - [Remove segments that are too short](#remove-segments-that-are-too-short)
-  - [Inconsistency](#inconsistency)
-    - [Identify segment inconsistencies and fix if appropriate](#identify-segment-inconsistencies-and-fix-if-appropriate)
-  - [Terminology](#terminology)
-    - [Identify terminology inconsistencies](#identify-terminology-inconsistencies)
-  - [Misalignments](#misalignments)
-    - [Check sentence length ratios](#check-sentence-length-ratios)
-  - [TM Maintenance](#tm-maintenance)
-    - [TM Maintenance Tools](#tm-maintenance-tools)
-    - [TM Backups](#tm-backups)
-- [Summary Table of Recommended Tasks for TMs](#summary-table-of-recommended-tasks-for-tms)
+TBD
 
-# Definitions/Key
+## Definitions/Key
 
-| | |
-|-|-|
+|Symbol| Definition|
+|---|---|
 |✔️| Recommended practice.|
 |❌| Not recommended or not valid for this use case.|
 |⚠️| Proceed with caution. This may or may not be a good practice depending on your environment. You may want to consult with your TMS and/or MT service providers for tool-specific guidance.|
 |**TMS**| Translation Management System (aka Globalization Management Systems (GMS) or Global Content Management Systems (GCMS)). A type of software for managing the content workflow within the human translation process.|
 
-# Best Practices
+## Best Practices
 
-## Create an Admin Role to Manage TMs
+### Create an Admin Role to Manage TMs
 
 TMS: ✔️ MT: ✔️
 
@@ -203,7 +155,7 @@ Specific recommended practices for this role may include:
 >
 > *83% of respondents have an admin role in one form or another, while 17% do not have it.*
 
-### Define how TMs are organized
+#### Define how TMs are organized
 
 TMS: ✔️ MT: ✔️
 
@@ -259,7 +211,7 @@ benefit; rather they just bloat the number of TMs to maintain.* e.g.
 
 ---
 
-**CASE STUDY: Example of TM separation at Company A**
+**⇨ CASE STUDY: Example of TM separation at Company A**
 
 - Separate TMs were created for:
   - Mobile (iOS & Android)
@@ -287,7 +239,7 @@ benefit; rather they just bloat the number of TMs to maintain.* e.g.
 >- *Quality (length-restricted, machine-translated, possibly unreviewed), 28%*
 >- *Screen Size (desktop vs. mobile), 9%*
 
-### Define metadata for TMs
+#### Define metadata for TMs
 
 TMS: ✔️ MT: ✔️
 
@@ -316,12 +268,11 @@ Recommended attributes (even if not available in TMS systems) include:
 >
 > *TM metadata is used to maximize quality and leverage, as well to identify the most effective MT training data. One of the users noted a need to track usage analytics for TM matches to facilitate TM maintenance.*
 
-### Determine the plan or principles for using TMs (grouping / leveraging / updating)
+#### Determine the plan or principles for using TMs (grouping / leveraging / updating)
 
 TMS: ✔️ MT: ✔️
 
-Determine the stated plan or guiding principles for grouping, priority,
-applying, penalization, and updating of TMs.
+Determine the stated plan or guiding principles for grouping, priority, applying, penalization, and updating of TMs.
 
 - Grouping / Hierarchy
 - Priority or Sequence (list of 5 TMs in prioritized order, for example)
@@ -334,18 +285,20 @@ complexity and potentially reducing quality. For some TMS systems,
 reducing the number of TMs leveraged is a recommended practice due to
 quality and performance concerns. Consult with your TMS provider for guidance.
 
-It is not recommended\* to update to multiple TMs after translation.
+**It is not recommended** to update to multiple TMs after translation.
 
-It is recommended\* to have a structured approach to managing TMs,
+**It is recommended** to have a structured approach to managing TMs,
 otherwise cleanup efforts are not as effective.
 
-**Group TM Considerations**
+---
+
+ℹ️ **Group TM Considerations**
 
 Many TMS allow you to reference other TMs in order to maximize the
 leverage potential of your corpus. Most TMS allow you to apply penalties
 to any leverage you get from reference TMs, in order to ensure the
 content appears as a fuzzy match requiring review, before being
-committed to the write-to TM. Consider the options below.
+committed to the write-to TM. Consider the options below:
 
 - **Leverage from TMs with length restrictions?**\
   *Translations may be compromised by the screen limitations or UI
@@ -367,12 +320,16 @@ committed to the write-to TM. Consider the options below.
   *If you reference reviewed MT content, do you want to reference only
   full human-quality or good-enough (fit for purpose) quality?*
 
-**Apply Penalties**
+---
+
+ℹ️  **Apply Penalties**
 
 In all the above cases you should apply a penalty against any references
 coming from the lesser-quality TM, or from one that uses a different
 translation style, in order to ensure it gets properly reviewed before
 being used.
+
+---
 
 >__Community Feedback:__
 >
@@ -383,7 +340,7 @@ being used.
 >- *Which TM(s) is/are updated after translation, 66%*
 >- *Grouping / Hierarchy, 59%*
 
-### Determine the process and criteria for cleaning TMs
+#### Determine the process and criteria for cleaning TMs
 
 TMS: ✔️ MT: ✔️
 
@@ -404,7 +361,9 @@ Define why, when, and how TMs should be cleaned:
 📓 **Note**: You may wish to tag and archive all verified wrong translations
 for future use in Machine Learning, as an example of a bad translation.
 
-Criteria that may be considered in decisions about cleanup:
+---
+
+ℹ️ Criteria that may be considered in decisions about cleanup:
 
 - Age of the segment (last modified date / last used date)
 - Terminology updates
@@ -416,6 +375,8 @@ Criteria that may be considered in decisions about cleanup:
 (A detailed list of cleaning criteria is contained in the sections
 below.)
 
+---
+
 >__Community Feedback:__
 >
 >- *About a half of respondents perform cleanup operations for TMS purposes by implementing terminology updates and by modifying “wrong” segments.*
@@ -423,12 +384,12 @@ below.)
 >- *Between 30 and 45% of respondents perform cleanup operations on a schedule for the MT purposes by deleting or modifying “wrong” segments and doing segment analysis. A quarter of users delete duplicates for the MT training purposes.*
 >- *Only 13-20% of respondents do not perform any cleanup tasks for either TMS or MT purposes.*
 
-## General TM Housekeeping tasks
+### General TM Housekeeping tasks
 
 *These are language-independent tasks, meaning that these tasks should
 be applied across all languages.*
 
-### Create complete descriptions for TMs
+#### Create complete descriptions for TMs
 
 TMS: ✔️ MT: ❌
 
@@ -436,7 +397,13 @@ The TM 'Description' field is critical in helping to differentiate and
 describe TM contents and use. It’s especially useful when you have
 multiple Admins creating TMs. Recommended practice.
 
-Example syntax: \[User's initials\] \[Date\] \[Description of TM\].
+---
+
+**⇨ Example syntax:**
+
+\[User's initials\] \[Date\] \[Description of TM\]
+
+---
 
 📓 **Note**: Some TMs are temporary, used to seed other languages (e.g. French to French-Canadian), so they have a shelf life. Knowing who created it, when, and having a useful description helps know how it's used and when to delete.
 
@@ -444,7 +411,7 @@ Example syntax: \[User's initials\] \[Date\] \[Description of TM\].
 >
 >*Community feedback indicates that a higher percentage create complete TM descriptions for TMS vs. MT.*
 
-### Use consistent filenames and path normalization to avoid duplicates
+#### Use consistent filenames and path normalization to avoid duplicates
 
 TMS: ✔️ MT: ❌
 
@@ -457,7 +424,10 @@ each translation cycle (or sprint).
 **Path normalization**: Use path normalization in conjunction with using consistent filenames,
 to reduce creation of TU duplicates. Recommended practice.
 
+📓 **Note**: This practice is not relevant for all TMS or for systems that use alternatives to TMs (e.g. documents in Transit or LiveDocs in memoQ).
+
 ---
+
 **⇨ SDL WorldServer Example**
 
 BEFORE path normalization:
@@ -483,9 +453,7 @@ Therefore no duplicate TUs are created.
 >
 >*Most respondents indicate a preference for creating consistent filenames for updated content & using path normalization.*
 
-📓 **Note**: This practice is not relevant for all TMS or for systems that use alternatives to TMs (e.g. documents in Transit or LiveDocs in memoQ).
-
-### Detect and fix technical issues in the content
+#### Detect and fix technical issues in the content
 
 TMS: ✔️ MT: ❌
 
@@ -517,7 +485,9 @@ changes carefully because parsing affects matches at every level (ICE,
 100% and fuzzy matches). If the parser and the cleanup efforts are not
 done in a coordinated fashion, a leverage loss will occur.
 
-Examples:
+---
+
+**⇨ Examples:**
 
 - Character corruption needs investigation.
 - Escaped HTML entities (or double-escaped entities) often indicate an
@@ -525,11 +495,13 @@ Examples:
 - Line breaks at 80 characters may indicate a parser that should do a
   better job of parsing text to flow across lines.
 
+---
+
 >__Community Feedback:__
 >
 >Most respondents have a process in place to fix corruption issues.This area continues to be a challenge for 20% of those surveyed.
 
-### Remove empty segments (source or target)
+#### Remove empty segments (source or target)
 
 TMS: ✔️ MT: ✔️
 
@@ -543,7 +515,7 @@ but that is not always the case.
 >
 >*Some TMS can be configured to not produce empty segments, so for those systems this is a non-issue.*
 
-## Characters
+### Characters
 
 ⚠️ Take extreme care with any normalization during cleanup;
 over-normalization can lead to loss of information and/or loss of
@@ -559,7 +531,7 @@ leverage.
     the file type, parser, and content type. Consider your specific
     use case and needs before taking any action.
 
-### Normalize escaped characters/entities
+#### Normalize escaped characters/entities
 
 TMS: ⚠️ MT: ✔️
 
@@ -602,7 +574,7 @@ characters in the TM, but as entities in the translated XML output.
 >
 >- *50% of respondents normalize characters/entities for TMS & MT.*
 
-### Normalize certain control characters
+#### Normalize certain control characters
 
 TMS: ⚠️ MT: ✔️
 
@@ -632,7 +604,7 @@ non-printable characters.
 >
 >- *43% of respondents normalize control characters for TMS and MT.*
 
-### Normalize whitespaces
+#### Normalize whitespaces
 
 TMS: ⚠️ MT: ✔️
 
@@ -657,7 +629,7 @@ a single space.
 >- *44% of respondents normalize whitespaces for TMS.*
 >- *53% of respondents normalize whitespaces for MT.*
 
-### Normalize quotes
+#### Normalize quotes
 
 TMS: ❌ MT: ⚠️
 
@@ -696,9 +668,9 @@ considering that these conversions are not a recommended practice.
 >- *70% of respondents do not normalize quotes in the SOURCE*
 >- *65% of respondents do not normalize quotes in the TARGET.*
 
-## Tags
+### Tags
 
-### Retain tagged or parameterized variables
+#### Retain tagged or parameterized variables
 
 TMS: ✔️ MT: ✔️
 
@@ -715,7 +687,7 @@ sentence.
 >- *88% of respondents retain tagged or parameterized variables for TMS.*
 >- *84%% retained these variables for MT purposes.*
 
-### Normalize untagged variable content
+#### Normalize untagged variable content
 
 TMS: ❌ MT: ✔️
 
@@ -747,7 +719,7 @@ the MT engine.
 >
 >*For the most part, this is not a recommended practice, according to feedback from the GILT community.*
 
-### Removing tags that don’t affect the meaning
+#### Removing tags that don’t affect the meaning
 
 TMS: ❌ MT: ✔️
 
@@ -768,13 +740,13 @@ TMS: ❌ MT: ✔️
 >
 >*For TMS, there is not a strong consensus on the practice to remove these types of tags. It may be dependent on the TMS used or the pre-processing steps to prepare an MT corpus. This practice is followed, in general, more widely for MT purposes.*
 
-## Duplicates
+### Duplicates
 
 While some duplicate segments in the TM are needed for ICE-matching
 purposes, it is otherwise good practice to remove unnecessary duplicates
 from TMs. This improves data quality, leverage and performance of TMs.
 
-### Identify and remove duplicates with no context for MT training purposes
+#### Identify and remove duplicates with no context for MT training purposes
 
 TMS: __N/A__ MT: ✔️
 
@@ -788,7 +760,7 @@ identical translation.
 >- *63% of respondents remove duplicates for MT training purposes*.
 >- Overall, survey results support the practice of removing duplicates.
 
-### Identify and remove In-Context Exact (ICE) duplicates for TMS
+#### Identify and remove In-Context Exact (ICE) duplicates for TMS
 
 TMS: ❌ MT: __N/A__
 
@@ -806,9 +778,9 @@ practices of path normalization to avoid this.
 >- *70% of TMS respondents do not remove ICE duplicates.*
 >- *Survey results support retaining ICE duplicates.*
 
-## Age/Obsolete
+### Age/Obsolete
 
-### Remove segments for being older than a certain age
+#### Remove segments for being older than a certain age
 
 TMS: ⚠️ MT: ⚠️
 
@@ -857,9 +829,9 @@ active/relevant TM content. Consider if applicable to your use case.
 >- *Quality/Consistency/Usefulness of content*
 >- *Performance*
 
-## Remove low value entries
+### Remove low value entries
 
-### Check if a segment contains mostly non-text content
+#### Check if a segment contains mostly non-text content
 
 TMS: ❌ MT: ✔️
 
@@ -874,7 +846,7 @@ non-word characters.
 >- *Remove the non-word characters, 10%*
 >- *Don’t have such practice, 30%*
 
-### Characters that do not match either the expected source or target language
+#### Characters that do not match either the expected source or target language
 
 TMS: ⚠️ MT: ✔️
 
@@ -907,7 +879,7 @@ removal/fix.
 >- *Remove the non-word characters, 0%*
 >- *Don’t have such practice, 71%*
 
-### Do not remove segments where source = target
+#### Do not remove segments where source = target
 
 TMS: ✔️ MT: ✔️
 
@@ -942,7 +914,7 @@ untranslated.
 >
 >*Those who remove such segments don’t want the MT system to learn to leave segments untranslated.*
 
-### Check unbalanced brackets
+#### Check unbalanced brackets
 
 TMS: ✔️ MT: ✔️
 
@@ -962,7 +934,7 @@ source, then remove.
 >
 >- *Only 22% of responders have such a practice*
 
-### Remove entries consisting of only punctuation, whitespace, or tags
+#### Remove entries consisting of only punctuation, whitespace, or tags
 
 TMS: ✔️ MT: ✔️
 
@@ -977,7 +949,7 @@ useful and should be removed from TMs and MT corpora.
 >
 >*It is more common to have additional validation of the corpora for the MT training.*
 
-### Remove segments that are too long
+#### Remove segments that are too long
 
 TMS: ❌ MT: ✔️
 
@@ -990,7 +962,7 @@ than 80 words.
 >
 >- *45% of responders have this practice*
 
-### Remove segments that are too short
+#### Remove segments that are too short
 
 TMS: ❌ MT: ✔️
 
@@ -1031,9 +1003,9 @@ gendered spelling and inflections.
 >
 >*Majority of the responders agree with the practice of removing segments that are too short or too long (even if not doing it right now).*
 
-## Inconsistency
+### Inconsistency
 
-### Identify segment inconsistencies and fix if appropriate
+#### Identify segment inconsistencies and fix if appropriate
 
 TMS: ✔️ MT: ✔️
 
@@ -1066,9 +1038,9 @@ Examples:
 >
 >*Some TMS have built-in QA checks and segment filters to alert user to review same-source-different-target, different-source-same-target, fuzzy match accepted but not edited.*
 
-## Terminology
+### Terminology
 
-### Identify terminology inconsistencies
+#### Identify terminology inconsistencies
 
 TMS: ✔️ MT: ✔️
 
@@ -1090,7 +1062,7 @@ your TMS provider.
 >
 >*Tools mentioned as solutions for fixing inconsistencies included ApSIC Xbench, Okapi Olifant, SDL Multiterm, memoQ, XTM automatic QA checks, and various internal scripts or tools.*
 
-## Misalignments
+### Misalignments
 
 It sometimes happens that source segments are associated with targets
 that do not represent a valid translation of the source content. This
@@ -1102,7 +1074,7 @@ should not be automatically deleted, but rather flagged for a linguist
 to review. For MT it may be acceptable to automatically remove segments
 that seem to be misaligned.
 
-### Check sentence length ratios
+#### Check sentence length ratios
 
 TMS: ⚠️ MT: ✔️
 
@@ -1123,9 +1095,9 @@ sentence.
 >
 >📓 ***Note:** The results do not necessarily indicate a best practice, only that people generally aren’t identifying bad segments using sentence length ratios, for many reasons. However, we still consider this practice a useful practice, and it is recommended by this group.*
 
-## TM Maintenance
+### TM Maintenance
 
-### TM Maintenance Tools
+#### TM Maintenance Tools
 
 TMS: ✔️ MT: ✔️
 
@@ -1146,7 +1118,7 @@ management tasks.
 Many companies also opt to develop proprietary tools for workflow
 services, TM storage and terminology management, using TMS SDK and APIs.
 
-### TM Backups
+#### TM Backups
 
 TMS: ✔️ MT: ✔️
 
@@ -1195,7 +1167,7 @@ The TMX backup is searched using the same search parameters as the original user
 
 ---
 
-# Summary Table of Recommended Tasks for TMs
+## Summary Table of Recommended Tasks for TMs
 
 | Task                                                                                 | For TMS | For MT |
 |--------------------------------------------------------------------------------------|---------|--------|
