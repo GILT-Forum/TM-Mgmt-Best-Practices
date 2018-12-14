@@ -47,8 +47,8 @@ You can contribute by suggesting changes in the project [Issues](https://github.
 
 ## License
 
-This project is licensed under the Creative Commons Attribution-ShareAlike 4.0 International Public
-License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+Public License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
